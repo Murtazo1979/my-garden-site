@@ -22,7 +22,7 @@ export default function About() {
             unforgettable café experiences surrounded by nature.
           </p>
           <img
-            src="/images/garden-cafe.jpg"
+            src="https://images.unsplash.com/photo-1563714193017-5a5fb60bc02b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2FyZGVufGVufDB8fDB8fHww"
             alt="Garden café design with outdoor tables and greenery"
             className="rounded-lg shadow-lg mx-auto mt-6"
           />
@@ -47,7 +47,7 @@ export default function About() {
           </p>
 
           <img
-            src="/images/cafe-ambience.jpg"
+            src=https://plus.unsplash.com/premium_photo-1726862929695-a582bf38510d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q296eSUyMGdhcmRlbiUyMGNhZiVDMyVBOSUyMHdpdGglMjBmbG93ZXJzJTIwYW5kJTIwbmF0dXJhbCUyMHdvb2QlMjBmdXJuaXR1cmV8ZW58MHx8MHx8fDA%3D"
             alt="Cozy garden café with flowers and natural wood furniture"
             className="rounded-md shadow-md my-6"
           />
@@ -85,7 +85,7 @@ export default function About() {
           </p>
 
           <img
-            src="/images/cafe-music.jpg"
+            src="https://images.unsplash.com/photo-1691099074649-0ecd30971667?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFJvbWFudGljJTIwZ2FyZGVuJTIwY2FmJUMzJUE5JTIwd2l0aCUyMHNvZnQlMjBsaWdodGluZyUyMGFuZCUyMGxpdmUlMjBtdXNpY3xlbnwwfHwwfHx8MA%3D%3D"
             alt="Romantic garden café with soft lighting and live music"
             className="rounded-md shadow-md my-6"
           />
