@@ -9,17 +9,18 @@ interface CardProps {
 
 export default function Card({ title, children, image }: CardProps) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
       {image && (
         <img
           src={image}
-          alt={title}
+          alt={title || "Card image"}
           className="w-full h-56 object-cover"
+          loading="lazy"
         />
       )}
       <div className="p-5">
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
-        <div className="text-gray-600 text-sm">{children}</div>
+        <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+        <div className="text-gray-600 text-sm leading-relaxed">{children}</div>
       </div>
     </div>
   );
