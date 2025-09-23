@@ -1,1 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Light mode (default) */
+html.light {
+  background-color: #ffffff;
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Dark mode */
+html.dark {
+  background-color: #111827; /* bg-gray-900 */
+  color: #f9fafb; /* text-gray-50 */
+}
+
+/* Navbar */
+html.dark nav {
+  background: linear-gradient(to right, #1e3a8a, #0f172a);
+}
+
+/* Cards */
+html.dark .card {
+  background-color: #1f2937; /* bg-gray-800 */
+  color: #f3f4f6; /* text-gray-100 */
+}
