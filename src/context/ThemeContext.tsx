@@ -1,34 +1,34 @@
 // src/context/ThemeContext.tsx
-import { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
-type Theme = "light" | "dark";
-
-interface ThemeContextType {
-  theme: Theme;
+interface ThemeContextProps {
+  theme: "light" | "dark";
   toggleTheme: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("light");
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
+  // localStorage'дан сақланган theme ни олдик
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") as Theme | null;
+    const savedTheme = localStorage.getItem("theme") as "light" | "dark";
     if (savedTheme) {
       setTheme(savedTheme);
       document.documentElement.classList.add(savedTheme);
     }
   }, []);
 
-  useEffect(() => {
-    document.documentElement.classList.remove(theme === "light" ? "dark" : "light");
-    document.documentElement.classList.add(theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+
+    localStorage.setItem("theme", newTheme);
+
+    // HTML <html> class ни алмаштирамиз
+    document.documentElement.classList.remove(theme);
+    document.documentElement.classList.add(newTheme);
   };
 
   return (
@@ -41,7 +41,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error("useTheme must be used within ThemeProvider");
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 }
