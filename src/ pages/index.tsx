@@ -1,119 +1,129 @@
 // src/pages/index.tsx
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Modern Garden Design Trends 2025 | MyGarden</title>
+        <title>MyGarden | Modern Garden Design Trends 2025</title>
         <meta
           name="description"
-          content="Explore the latest garden design trends for cafes, restaurants, and homes in 2025. Perfect inspiration for USA and European audiences."
+          content="Explore modern garden café design trends. Unique ideas to attract American and European visitors with eco-friendly and stylish solutions."
         />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="max-w-5xl mx-auto px-6 py-20">
+      <main className="max-w-7xl mx-auto px-6 py-12">
         {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-green-700 mb-4">
+        <section className="text-center mb-16 bg-gradient-to-r from-green-700 to-emerald-500 text-white py-20 rounded-xl shadow-lg">
+          <h1 className="text-5xl font-extrabold mb-6">
             🌿 Modern Garden Design Trends 2025
           </h1>
-          <p className="text-lg text-gray-600">
-            Discover unique ideas to transform your garden, café, or restaurant into 
-            a stylish and eco-friendly space loved by American and European visitors.
+          <p className="text-lg max-w-2xl mx-auto mb-8">
+            Discover eco-friendly and stylish garden café designs loved by
+            American and European visitors. Bring nature and comfort together.
           </p>
-          <img
-            src="/images/garden-hero.jpg"
-            alt="Modern garden design with greenery and lights"
-            className="rounded-lg shadow-lg mx-auto mt-6"
-          />
+          <Link
+            href="/contact"
+            className="bg-yellow-400 text-green-900 px-6 py-3 rounded-lg font-semibold shadow hover:bg-yellow-500 transition"
+          >
+            Contact Us
+          </Link>
         </section>
 
-        {/* Blog Content */}
-        <article className="prose lg:prose-lg">
-          <h2>1. Sustainable and Eco-Friendly Gardens</h2>
-          <p>
-            In 2025, sustainability is not just a trend — it’s a necessity. American 
-            and European audiences are increasingly aware of climate change and eco 
-            responsibility. Restaurants and cafés that integrate solar lighting, 
-            recycled materials, and water-saving irrigation systems in their gardens 
-            attract more visitors and positive media attention.
-          </p>
+        {/* Features Section */}
+        <section className="grid md:grid-cols-3 gap-8 text-center mb-16">
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-bold text-green-700 mb-3">Eco-Friendly</h3>
+            <p>
+              Sustainable materials and green design that respect nature and
+              attract eco-conscious visitors.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-bold text-green-700 mb-3">Modern Look</h3>
+            <p>
+              Blend of modern architecture and natural vibes that make your café
+              stand out.
+            </p>
+          </div>
+          <div className="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-bold text-green-700 mb-3">Customer Focus</h3>
+            <p>
+              Designed for comfort, relaxation, and Instagram-worthy
+              experiences.
+            </p>
+          </div>
+        </section>
 
-          <h2>2. Minimalist Design with Natural Touch</h2>
-          <p>
-            Minimalism continues to inspire designers worldwide. Scandinavian 
-            simplicity combined with Mediterranean warmth is the perfect balance 
-            for outdoor spaces. Wooden furniture, stone paths, and neutral colors 
-            provide comfort while still looking modern.
-          </p>
+        {/* Card Grid Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-10 text-emerald-700">
+            Featured Ideas
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow hover:shadow-lg transition">
+              <img
+                src="https://images.unsplash.com/photo-1563714193017-5a5fb60bc02b?w=600&auto=format&fit=crop&q=60"
+                alt="Outdoor café with garden tables"
+                className="rounded-t-xl w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <h3 className="font-bold text-lg mb-2">Outdoor Café Vibes</h3>
+                <p>
+                  Wooden tables surrounded by nature – perfect for cozy
+                  gatherings.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow hover:shadow-lg transition">
+              <img
+                src="https://images.unsplash.com/photo-1503602642458-232111445657?w=600&auto=format&fit=crop&q=60"
+                alt="Garden café with colorful chairs"
+                className="rounded-t-xl w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <h3 className="font-bold text-lg mb-2">Colorful Comfort</h3>
+                <p>
+                  Bright and modern designs that attract both locals and
+                  tourists.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow hover:shadow-lg transition">
+              <img
+                src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=600&auto=format&fit=crop&q=60"
+                alt="Romantic evening lights in garden café"
+                className="rounded-t-xl w-full h-48 object-cover"
+              />
+              <div className="p-5">
+                <h3 className="font-bold text-lg mb-2">Evening Romance</h3>
+                <p>
+                  Soft lighting and green atmosphere – ideal for late-night
+                  talks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <img
-            src="/images/minimalist-garden.jpg"
-            alt="Minimalist garden with wooden chairs and stone pathway"
-            className="rounded-md shadow-md my-6"
-          />
-
-          <h2>3. Smart Gardens with Technology</h2>
-          <p>
-            Technology is playing a huge role in 2025 garden designs. From smart 
-            irrigation systems controlled via mobile apps to automated LED lighting 
-            that changes colors at night, Americans and Europeans love the mix of 
-            nature and technology. This not only makes the garden attractive but also 
-            energy-efficient.
+        {/* Call to Action */}
+        <section className="text-center bg-green-100 py-12 rounded-xl shadow-inner">
+          <h2 className="text-3xl font-bold mb-4 text-green-800">
+            Ready to Build Your Dream Garden Café?
+          </h2>
+          <p className="mb-6 text-gray-700">
+            Contact our team today and transform your vision into reality. Let’s
+            design a space that will attract customers and inspire visitors.
           </p>
-
-          <h2>4. Green Walls and Vertical Gardens</h2>
-          <p>
-            In urban areas, space is limited. Vertical gardens and green walls 
-            transform small balconies or restaurant patios into green paradises. 
-            They also improve air quality and create a relaxing atmosphere for guests.
-          </p>
-
-          <h2>5. Outdoor Dining Experience</h2>
-          <p>
-            Outdoor dining has become essential since the pandemic. Cafés and 
-            restaurants in the US and EU are investing in cozy, garden-inspired 
-            dining areas with natural wood tables, hanging lights, and lots of 
-            greenery. Customers feel more comfortable and safe in open-air 
-            environments.
-          </p>
-
-          <img
-            src="/images/outdoor-dining.jpg"
-            alt="Beautiful outdoor dining in a modern café garden"
-            className="rounded-md shadow-md my-6"
-          />
-
-          <h2>6. The Role of Lighting in Garden Atmosphere</h2>
-          <p>
-            Lighting is no longer just functional; it’s part of the design. Warm 
-            string lights, lanterns, and solar-powered lamps are very popular. 
-            They create a romantic European vibe while being cost-effective and 
-            eco-friendly.
-          </p>
-          <h2>7. Fusion of Local Culture</h2>
-          <p>
-            Gardens in 2025 often combine local traditions with modern aesthetics. 
-            For example, an American café might include Japanese Zen garden elements, 
-            while a European restaurant could mix Mediterranean olive trees with 
-            Nordic minimalism. This cultural blend creates a unique identity.
-          </p>
-
-          <h2>Conclusion</h2>
-          <p>
-            Modern garden design in 2025 is all about balance: sustainability, 
-            technology, culture, and aesthetics. Whether you are a café owner in 
-            New York or a restaurant designer in Paris, these trends will help you 
-            attract new customers and create unforgettable experiences.
-          </p>
-
-          <p className="mt-6 text-gray-700 italic">
-            ✨ Stay tuned for more unique garden design posts. Each article on 
-            MyGarden is original, over 1000 words, and written with international 
-            readers in mind.
-          </p>
-        </article>
+          <Link
+            href="/contact"
+            className="bg-green-700 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-800 transition"
+          >
+            Get in Touch
+          </Link>
+        </section>
       </main>
     </>
   );
