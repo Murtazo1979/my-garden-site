@@ -1,18 +1,11 @@
-// src/pages/index.tsx
-import Head from "next/head";
-import Link from "next/link";
-
+import { Seo } from "../lib/seo";
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>MyGarden | Modern Garden Design Trends 2025</title>
-        <meta
-          name="description"
-          content="Explore modern garden café design trends. Unique ideas to attract American and European visitors with eco-friendly and stylish solutions."
+      <Seo
+        title="MyGarden | Modern Garden Design Trends 2025"
+        description="Explore modern garden café design trends. Unique ideas to attract American and European visitors with eco-friendly and stylish solutions."
         />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
       <main className="max-w-7xl mx-auto px-6 py-12">
         {/* Hero Section */}
