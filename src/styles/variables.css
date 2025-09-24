@@ -1,1 +1,19 @@
+/* src/styles/variables.css */
 
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+
+  --color-primary: #10b981; /* emerald-500 */
+  --color-secondary: #047857; /* green-700 */
+  --color-accent: #f59e0b; /* amber-500 */
+}
+
+html.dark {
+  --color-bg: #111827;
+  --color-text: #f3f4f6;
+
+  --color-primary: #34d399; /* light emerald */
+  --color-secondary: #10b981;
+  --color-accent: #fbbf24;
+}
