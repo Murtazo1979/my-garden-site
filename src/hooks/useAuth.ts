@@ -1,26 +1,41 @@
 // src/hooks/useAuth.ts
 import { useState, useEffect } from "react";
-import { login, logout, getCurrentUser } from "../services/authService";
+import { loginUser, logoutUser, getCurrentUser } from "../services/authService";
 
 export function useAuth() {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const storedUser = getCurrentUser();
-    if (storedUser) setUser(storedUser);
-    setLoading(false);
+    const fetchUser = async () => {
+      try {
+        const currentUser = await getCurrentUser();
+        setUser(currentUser);
+      } catch {
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchUser();
   }, []);
 
-  const handleLogin = async (email: string, password: string) => {
-    const loggedUser = await login(email, password);
-    setUser(loggedUser);
+  const login = async (username: string, password: string) => {
+    const loggedInUser = await loginUser(username, password);
+    setUser(loggedInUser);
+    return loggedInUser;
   };
 
-  const handleLogout = () => {
-    logout();
+  const logout = async () => {
+    await logoutUser();
     setUser(null);
   };
 
-  return { user, loading, handleLogin, handleLogout };
+  return {
+    user,
+    login,
+    logout,
+    isAuthenticated: !!user,
+    loading,
+  };
 }
