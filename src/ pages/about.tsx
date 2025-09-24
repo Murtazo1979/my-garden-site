@@ -1,16 +1,11 @@
-// src/pages/about.tsx
-import Head from "next/head";
-
+import { Seo } from "../lib/seo";
 export default function About() {
   return (
     <>
-      <Head>
-        <title>How to Build a Garden Café That Attracts Customers | MyGarden</title>
-        <meta
-          name="description"
-          content="Step-by-step guide on building a successful garden café that attracts American and European customers. From design to atmosphere."
+      <Seo
+        title="How to Build a Garden Café That Attracts Customers | MyGarden"
+        description="Step-by-step guide on building a successful garden café that attracts American and European customers. From design to atmosphere."
         />
-      </Head>
 
       <main className="max-w-5xl mx-auto px-6 py-20">
         <section className="text-center mb-16">
